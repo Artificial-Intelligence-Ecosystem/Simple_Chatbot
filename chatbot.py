@@ -1,7 +1,6 @@
 import datetime
 import random
 from colorama import Fore, Style
-import tkinter as tk
 
 
 # Function to get a response based on user input
@@ -73,51 +72,51 @@ def get_response(user_input, user_name):
     if "sad" in user_input:
         quotes_for_sadness = random.choice(saddened_motivational_quotes)
         feeling_color = feeling_colors["sad"]
-        return f"{feeling_color}I'm sorry to hear that, {user_name}! Your motivational quote is: {quotes_for_sadness}.  How else are you feeling?{Style.RESET_ALL}"
+        return f"I'm sorry to hear that, {user_name}! Your motivational quote is:\n {feeling_color}{quotes_for_sadness}.{Style.RESET_ALL}  \nHow else are you feeling?"
     elif "angry" in user_input:
         quotes_for_anger = random.choice(angry_motivational_quotes)
         feeling_color = feeling_colors["angry"]
-        return f"{feeling_color}I'm sorry to hear that, {user_name}!  Your motivational quote is: {quotes_for_anger}.  How else are you feeling?{Style.RESET_ALL}"
+        return f"I'm sorry to hear that, {user_name}!  Your motivational quote is:\n {feeling_color}{quotes_for_anger}.{Style.RESET_ALL}  \nHow else are you feeling?"
     elif "unhappy" in user_input:
         quotes_for_unhappiness = random.choice(unhappy_motivational_quotes)
         feeling_color = feeling_colors["unhappy"]
-        return f"{feeling_color}I'm sorry to hear that, {user_name}!  Your motivational quote is: {quotes_for_unhappiness}.  How else are you feeling?{Style.RESET_ALL}"
+        return f"I'm sorry to hear that, {user_name}!  Your motivational quote is:\n {feeling_color}{quotes_for_unhappiness}.{Style.RESET_ALL}  \nHow else are you feeling?"
     elif "annoyed" in user_input:
         quotes_for_annoyance = random.choice(annoyed_motivational_quotes)
         feeling_color = feeling_colors["annoyed"]
-        return f"{feeling_color}I'm sorry to hear that, {user_name}!  Your motivational quote is: {quotes_for_annoyance}. How else are you feeling?{Style.RESET_ALL}"
+        return f"I'm sorry to hear that, {user_name}!  Your motivational quote is:\n {feeling_color}{quotes_for_annoyance}.{Style.RESET_ALL} \nHow else are you feeling?"
     elif "frustrated" in user_input:
         quotes_for_frustration = random.choice(frustrated_motivational_quotes)
         feeling_color = feeling_colors["frustrated"]
-        return f"{feeling_color}I'm sorry to hear that, {user_name}!  Your motivational quote is: {quotes_for_frustration}.  How else are you feeling?{Style.RESET_ALL}"
+        return f"I'm sorry to hear that, {user_name}!  Your motivational quote is:\n {feeling_color}{quotes_for_frustration}.{Style.RESET_ALL} \nHow else are you feeling?"
     elif "lonely" in user_input:
         quotes_for_loneliness = random.choice(lonely_motivational_quotes)
         feeling_color = feeling_colors["lonely"]
-        return f"{feeling_color}I'm sorry to hear that, {user_name}!  Your motivational quote is: {quotes_for_loneliness}.  How else are you feeling?{Style.RESET_ALL}"
+        return f"I'm sorry to hear that, {user_name}!  Your motivational quote is:\n {feeling_color}{quotes_for_loneliness}.{Style.RESET_ALL}  \nHow else are you feeling?"
     elif "stressed" in user_input:
         quotes_for_stress = random.choice(stressed_motivational_quotes)
         feeling_color = feeling_colors["stressed"]
-        return f"{feeling_color}I'm sorry to hear that, {user_name}!  Your motivational quote is: {quotes_for_stress}.  How else are you feeling?{Style.RESET_ALL}"
+        return f"I'm sorry to hear that, {user_name}!  Your motivational quote is:\n {feeling_color}{quotes_for_stress}. {Style.RESET_ALL} \nHow else are you feeling?"
     elif "tired" in user_input:
         quotes_for_tiredness = random.choice(tired_motivational_quotes)
         feeling_color = feeling_colors["tired"]
-        return f"{feeling_color}I'm sorry to hear that, {user_name}!  Your motivational quote is: {quotes_for_tiredness}  How else are you feeling?{Style.RESET_ALL}"
+        return f"I'm sorry to hear that, {user_name}!  Your motivational quote is:\n {feeling_color}{quotes_for_tiredness}{Style.RESET_ALL}  \nHow else are you feeling?"
     elif "happy" in user_input:
         quotes_for_happiness = random.choice(happy_motivational_quotes)
         feeling_color = feeling_colors["happy"]
-        return f"{feeling_color}I'm glad to hear that, {user_name}!  Your motivational quote is: {quotes_for_happiness}.  How else are you feeling?{Style.RESET_ALL}"
+        return f"I'm glad to hear that, {user_name}!  Your motivational quote is:\n {feeling_color}{quotes_for_happiness}.{Style.RESET_ALL}  \nHow else are you feeling?"
     elif "excited" in user_input:
         quotes_for_excitement = random.choice(excited_motivational_quotes)
         feeling_color = feeling_colors["excited"]
-        return f"{feeling_color}I'm glad to hear that, {user_name}!  Your motivational quote is: {quotes_for_excitement}.  How else are you feeling?{Style.RESET_ALL}"
+        return f"I'm glad to hear that, {user_name}!  Your motivational quote is:\n {feeling_color}{quotes_for_excitement}.{Style.RESET_ALL}  \nHow else are you feeling?"
     elif "motivated" in user_input:
         quotes_for_motivation = random.choice(motivated_motivational_quotes)
         feeling_color = feeling_colors["motivated"]
-        return f"{feeling_color}I'm glad to hear that, {user_name}!  Your motivational quote is: {quotes_for_motivation} How else are you feeling?{Style.RESET_ALL}"
+        return f"I'm glad to hear that, {user_name}!  Your motivational quote is:\n {feeling_color}{quotes_for_motivation}{Style.RESET_ALL} \nHow else are you feeling?"
     elif "inspired" in user_input:
         quotes_for_inspiration = random.choice(inspired_motivational_quotes)
         feeling_color = feeling_colors["inspired"]
-        return f"{feeling_color}I'm glad to hear that, {user_name}!  Your motivational quote is: {quotes_for_inspiration}.  How else are you feeling?{Style.RESET_ALL}"
+        return f"I'm glad to hear that, {user_name}!  Your motivational quote is:\n {feeling_color}{quotes_for_inspiration}.{Style.RESET_ALL}  \nHow else are you feeling?"
     elif "bye" in user_input or "goodbye" in user_input:
         return f"Goodbye, {user_name}! Have a great day!"
     else:
@@ -134,53 +133,46 @@ def get_greeting():
     else:
         return "Good Evening"
 
+
+#def case insensitive
+def case_insensitive(user_input):
+    responses = ["sad", "angry", "unhappy", "annoyed", "frustrated", "lonely", "stressed", "tired", "happy", "excited", "motivated", "inspired"]
+    
+    # Calculate similarity based on matching characters and length difference
+    def similarity(x, y):
+        matching_chars = sum(1 for a, b in zip(x, y) if a == b)
+        length_difference = abs(len(x) - len(y))
+        return matching_chars - length_difference
+    
+    closest_match = max(responses, key=lambda x: similarity(x, user_input.lower()))
+    
+    if user_input.lower() != closest_match:
+        print(f"Chatbot: Did you mean '{closest_match}'?")
+    
+    return closest_match
+
 # Main function to run the chatbot
 def main():
 
-    root = tk.Tk()
-    root.title("Simple Chatbot")
-
-    label = tk.Label(root, text="Hello! Welcome to the simple Python chatbot!")
-    label.pack()
-
-    nameLabel = tk.Label(root, text="What's your name?")
-    nameLabel.pack()
-
-    entry = tk.Entry(root, width=50)
-    entry.pack()
-
-    button = tk.Button(root, text="Enter", command=lambda: show_quote(entry.get(), nameLabel))
-    button.pack()
-
+    print("Hello! Welcome to the simple Python chatbot!")
+    
+    user_name = input("What's your name? ")
     greeting = get_greeting()
-
-    responseLabel = tk.Label(root, text=f"{greeting}, {nameLabel}!  I'm here to motivate you.  How are you feeling today? I have quotes for the following moods or feelings: \nsad, angry, unhappy, annoyed, frustrated, lonely, stressed, tired, happy, excited, motivated, inspired.")
-    responseLabel.pack()
-
-    quoteLabel = tk.Label(root, text="")
-    quoteLabel.pack()
-
-    def show_quote(user_input, user_name):
-        quote = get_response(user_input, user_name)
-        quoteLabel.config(text=quote)
-
-    root.mainloop()
     
-    # print("Hello! Welcome to the simple Python chatbot!")
+    print(f"{greeting}, {user_name}!  I'm here to motivate you.  How are you feeling today? I have quotes for the  following moods or feelings: \nsad, angry, unhappy, annoyed, frustrated, lonely, stressed, tired, happy, excited, motivated, inspired.")
+    print("Type 'bye' to exit.")
     
-    # user_name = input("What's your name? ")
-    # greeting = get_greeting()
-    
-    # print(f"{greeting}, {user_name}!  I'm here to motivate you.  How are you feeling today? I have quotes for the  following moods or feelings: \nsad, angry, unhappy, annoyed, frustrated, lonely, stressed, tired, happy, excited, motivated, inspired.")
-    # print("Type 'bye' to exit.")
-    
-    # while True:
-    #     user_input = input("You: ")
-    #     if user_input.lower() in ["bye", "goodbye"]:
-    #         print(f"Chatbot: Goodbye, {user_name}! Have a great day!")
-    #         break
-    #     response = get_response(user_input, user_name)
-    #     print(f"Chatbot: {response}")
+    while True:
+        user_input = input("You: ")
+        # match case insensitive
+        if user_input.lower() in ["bye", "goodbye"]:
+            print(f"Chatbot: Goodbye, {user_name}! Have a great day!")
+            break
+        else:
+            user_input = case_insensitive(user_input)
+        
+        response = get_response(user_input, user_name)
+        print(f"Chatbot: {response}")
 
 # Run the chatbot
 if __name__ == "__main__":
